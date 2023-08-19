@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
+
 import { getTrandingMovies } from '../api/api';
 import TrandingList from 'components/TrandingList/TrandingList';
-import { ErrorText, Title } from './PageElements.styled';
 import Loader from '../components/Loader/Loader';
+import { ErrorText, Title } from './PageElements.styled';
+
 const Home = () => {
   const [trandingList, setTrendingList] = useState([]);
   const [isError, setIsError] = useState(false);
